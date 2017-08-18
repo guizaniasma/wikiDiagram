@@ -46,6 +46,10 @@ public class DiagramMacro extends AbstractMacro<DiagramMacroParameters> {
     PortletRequestContext portletRequestContext = (PortletRequestContext)PortalRequestContext.getCurrentInstance();
     JavascriptManager javascriptManager = portletRequestContext.getJavascriptManager();
     javascriptManager.require("SHARED/wikiMermaid");
+//    
+//    PortletRequestContext portletRequestContext = (PortletRequestContext)PortalRequestContext.getCurrentInstance();
+//    JavascriptManager javascriptManager = portletRequestContext.getJavascriptManager();
+//    javascriptManager.require("SHARED/wikiMermaid");
 
     RawBlock rawBlock = new RawBlock(sb.toString(), Syntax.XHTML_1_0);
     return Collections.singletonList((Block) rawBlock);
